@@ -39,12 +39,12 @@ namespace  SucursalElectronicaCliente.AppCode.Controllers
 
             var jsonRequest = new JsonRequest
             {
-                Controller = "FileController",
+                Service = "FileController",
                 Action = "Listar Archivos",
                 Credentials = new Credentials
                 {
-                    Username = credentials.Username,
-                    Password = credentials.Password
+                    CustomerNumber = credentials.CustomerNumber,
+                    Pin = credentials.Pin
                 }
             };
 
@@ -62,7 +62,7 @@ namespace  SucursalElectronicaCliente.AppCode.Controllers
 
             return Encoding.ASCII.GetString(data);
             //JsonResponse = JsonConvert.DeserializeObject<JsonResponse>(jsonResponse);
-            //if (JsonResponse.Result == "Invalid")
+            //if (JsonResponse.MessageResult == "Invalid")
             //{
             //    MessageBox.Show("No se pudo completar la acción.");
             //    return;

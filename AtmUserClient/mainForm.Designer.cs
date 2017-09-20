@@ -38,7 +38,7 @@
             this.mlBack.Image = ((System.Drawing.Image)(resources.GetObject("mlBack.Image")));
             this.mlBack.ImageSize = 32;
             this.mlBack.Location = new System.Drawing.Point(31, 25);
-            this.mlBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mlBack.Margin = new System.Windows.Forms.Padding(4);
             this.mlBack.Name = "mlBack";
             this.mlBack.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("mlBack.NoFocusImage")));
             this.mlBack.Size = new System.Drawing.Size(51, 43);
@@ -52,7 +52,7 @@
             this.mpMainPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.mpMainPanel.HorizontalScrollbarSize = 12;
             this.mpMainPanel.Location = new System.Drawing.Point(0, 75);
-            this.mpMainPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mpMainPanel.Margin = new System.Windows.Forms.Padding(4);
             this.mpMainPanel.Name = "mpMainPanel";
             this.mpMainPanel.Size = new System.Drawing.Size(963, 437);
             this.mpMainPanel.TabIndex = 1;
@@ -68,10 +68,10 @@
             this.Controls.Add(this.mpMainPanel);
             this.Controls.Add(this.mlBack);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "mainForm";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
-            this.Text = "      Secure FTP";
+            this.Text = "      ATM User Client";
             this.Load += new System.EventHandler(this.mainForm_Load);
             this.ResumeLayout(false);
 

@@ -60,14 +60,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppCode\Controllers\AccountController.cs" />
     <Compile Include="AppCode\Controllers\FileController.cs" />
     <Compile Include="AppCode\CryptographyObject.cs" />
+    <Compile Include="AppCode\DtoModels\LogDto.cs" />
     <Compile Include="AppCode\DtoModels\FileDto.cs" />
     <Compile Include="AppCode\DtoModels\UserDto.cs" />
     <Compile Include="AppCode\Dto\Credentials.cs" />
     <Compile Include="AppCode\Dto\JsonFormat.cs" />
     <Compile Include="AppCode\Dto\JsonResponse.cs" />
     <Compile Include="AppCode\Dto\JsonRequest.cs" />
+    <Compile Include="AppCode\Repository\CryptographyRepository.cs" />
+    <Compile Include="AppCode\Repository\SocketRepository.cs" />
     <Compile Include="AppCode\Repository\UserRepository.cs" />
     <Compile Include="AppCode\Repository\FileRepository.cs" />
     <Compile Include="mainForm.cs">
@@ -83,6 +87,18 @@
     </Compile>
     <Compile Include="UserControls\ucBase.Designer.cs">
       <DependentUpon>ucBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucConsultaDeSaldo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucConsultaDeSaldo.Designer.cs">
+      <DependentUpon>ucConsultaDeSaldo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucRetiroMisCuentas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucRetiroMisCuentas.Designer.cs">
+      <DependentUpon>ucRetiroMisCuentas.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucMisArchivosDescarga.cs">
       <SubType>UserControl</SubType>
@@ -129,6 +145,12 @@
     </Compile>
     <EmbeddedResource Include="UserControls\ucBase.resx">
       <DependentUpon>ucBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucConsultaDeSaldo.resx">
+      <DependentUpon>ucConsultaDeSaldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucRetiroMisCuentas.resx">
+      <DependentUpon>ucRetiroMisCuentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucMisArchivosDescarga.resx">
       <DependentUpon>ucMisArchivosDescarga.cs</DependentUpon>

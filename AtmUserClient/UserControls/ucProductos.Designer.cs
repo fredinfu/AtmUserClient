@@ -67,8 +67,8 @@
             this.mgProductos.EnableHeadersVisualStyles = false;
             this.mgProductos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mgProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mgProductos.Location = new System.Drawing.Point(3, 95);
-            this.mgProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mgProductos.Location = new System.Drawing.Point(4, 117);
+            this.mgProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mgProductos.Name = "mgProductos";
             this.mgProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -82,16 +82,15 @@
             this.mgProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.mgProductos.RowTemplate.Height = 24;
             this.mgProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.mgProductos.Size = new System.Drawing.Size(955, 359);
+            this.mgProductos.Size = new System.Drawing.Size(1273, 442);
             this.mgProductos.TabIndex = 0;
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(3, 43);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel1.Location = new System.Drawing.Point(4, 53);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(54, 20);
             this.metroLabel1.TabIndex = 1;
             this.metroLabel1.Text = "Buscar:";
             // 
@@ -101,18 +100,18 @@
             // 
             // 
             this.txtSearch.CustomButton.Image = null;
-            this.txtSearch.CustomButton.Location = new System.Drawing.Point(94, 1);
-            this.txtSearch.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch.CustomButton.Location = new System.Drawing.Point(225, 1);
+            this.txtSearch.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.CustomButton.Name = "";
-            this.txtSearch.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.txtSearch.CustomButton.Size = new System.Drawing.Size(28, 26);
             this.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSearch.CustomButton.TabIndex = 1;
             this.txtSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtSearch.CustomButton.UseSelectable = true;
             this.txtSearch.CustomButton.Visible = false;
             this.txtSearch.Lines = new string[0];
-            this.txtSearch.Location = new System.Drawing.Point(48, 43);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch.Location = new System.Drawing.Point(64, 53);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.MaxLength = 32767;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
@@ -122,7 +121,7 @@
             this.txtSearch.SelectionLength = 0;
             this.txtSearch.SelectionStart = 0;
             this.txtSearch.ShortcutsEnabled = true;
-            this.txtSearch.Size = new System.Drawing.Size(143, 19);
+            this.txtSearch.Size = new System.Drawing.Size(191, 23);
             this.txtSearch.TabIndex = 2;
             this.txtSearch.UseSelectable = true;
             this.txtSearch.WaterMark = "Cuentas de ahorro, Tarjetas";
@@ -133,35 +132,36 @@
             // 
             this.mlSearch.Image = ((System.Drawing.Image)(resources.GetObject("mlSearch.Image")));
             this.mlSearch.ImageSize = 32;
-            this.mlSearch.Location = new System.Drawing.Point(196, 37);
-            this.mlSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mlSearch.Location = new System.Drawing.Point(261, 46);
+            this.mlSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mlSearch.Name = "mlSearch";
-            this.mlSearch.Size = new System.Drawing.Size(56, 31);
+            this.mlSearch.Size = new System.Drawing.Size(75, 38);
             this.mlSearch.TabIndex = 3;
             this.mlSearch.UseSelectable = true;
             // 
             // mtAddProduct
             // 
             this.mtAddProduct.ActiveControl = null;
-            this.mtAddProduct.Location = new System.Drawing.Point(3, 67);
+            this.mtAddProduct.Location = new System.Drawing.Point(4, 82);
+            this.mtAddProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mtAddProduct.Name = "mtAddProduct";
-            this.mtAddProduct.Size = new System.Drawing.Size(188, 23);
+            this.mtAddProduct.Size = new System.Drawing.Size(251, 28);
             this.mtAddProduct.TabIndex = 4;
             this.mtAddProduct.Text = "&Agregar Producto";
             this.mtAddProduct.UseSelectable = true;
             // 
             // ucProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.mtAddProduct);
             this.Controls.Add(this.mlSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.mgProductos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucProductos";
-            this.Size = new System.Drawing.Size(960, 469);
+            this.Size = new System.Drawing.Size(1280, 577);
             this.Load += new System.EventHandler(this.ucProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mgProductos)).EndInit();
             this.ResumeLayout(false);

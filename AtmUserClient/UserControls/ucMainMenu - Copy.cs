@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Net;
-using System.Net.Sockets;
-using SucursalElectronicaCliente.AppCode.Dto;
-using Newtonsoft.Json;
+﻿using  System;
+using  System.Collections.Generic;
+using  System.ComponentModel;
+using  System.Drawing;
+using  System.Data;
+using  System.Linq;
+using  System.Text;
+using  System.Threading.Tasks;
+using  System.Windows.Forms;
+using  System.Net;
+using  System.Net.Sockets;
+using  SucursalElectronicaCliente.AppCode.Dto;
+using  Newtonsoft.Json;
 
-namespace SecureFtpClient.UserControls
+namespace  SecureFtpClient.UserControls
 {
     public partial class ucMainMenu : ucBase
     {
@@ -25,7 +25,7 @@ namespace SecureFtpClient.UserControls
         {
 
         }
-
+        
         private void MakeDigitarCuentaVisible()
         {
             //mtbDigitarCuenta.Visible = true;
@@ -85,13 +85,6 @@ namespace SecureFtpClient.UserControls
             ucMisArchivosDescarga.Instance.LoadDataForm();
         }
 
-        private void ShowRetiroUI()
-        {
-            //mainForm.Instance.GetMisArchivosDescarga();
-            BringToFront(typeof(ucRetiroMisCuentas).Name);
-            ucRetiroMisCuentas.Instance.LoadDataForm();
-        }
-
         //private void metroQryTarjetas_Click(object sender, EventArgs e)
         //{
         //    BringToFront(typeof(ucConsultasTarjetasCredito).Name);
@@ -100,14 +93,12 @@ namespace SecureFtpClient.UserControls
 
         private void mtExplore_Click(object sender, EventArgs e)
         {
-
-            return;
             var dialog = new OpenFileDialog();
             dialog.Title = "Selecciona tu archivo";
             dialog.InitialDirectory = @"C:\";
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                //mtFilePath.Text = dialog.FileName;
+                mtFilePath.Text = dialog.FileName;
                 mainForm.Instance.SafeFileNameSelected = dialog.SafeFileName;
             }
             //var openFileDialog1 = new OpenFileDialog();
@@ -135,46 +126,16 @@ namespace SecureFtpClient.UserControls
             ucArchivosPermitidosDescarga.Instance.LoadDataForm();
         }
 
-
+        
 
         private void mlBack_Click(object sender, EventArgs e)
         {
-            //if (mtFilePath.Text.Trim() == string.Empty)
-            //{
-            //    MessageBox.Show("Debe seleccionar un archivo antes de hacer click en subir.");
-            //    return;
-            //}
-            //mainForm.Instance.UploadArchivoSeleccionado(mtFilePath.Text);
-        }
-
-        private void metroLink2_Click(object sender, EventArgs e)
-        {
-            var bitacora = new List<object> {
-                new
-                {
-                    Accion = "Inicio Sesion",
-                    Fecha = "12/31/2016",
-                    Descripcion = "El usuario ha iniciado sesion correctamente."
-                },
-                new
-                {
-                    Accion = "Inicio Sesion",
-                    Fecha = "12/31/2016",
-                    Descripcion = "El usuario ha ingresado un password incorrecto."
-                },
-                new
-                {
-                    Accion = "Inicio Sesion",
-                    Fecha = "12/31/2016",
-                    Descripcion = "El usuario ha iniciado sesion correctamente."
-                }
-            };
-        }
-
-        private void metroTile2_Click(object sender, EventArgs e)
-        {
-            BringToFront(typeof(ucConsultaDeSaldo).Name);
-            ucConsultaDeSaldo.Instance.LoadDataForm();
+            if (mtFilePath.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Debe seleccionar un archivo antes de hacer click en subir.");
+                return;
+            }
+            mainForm.Instance.UploadArchivoSeleccionado(mtFilePath.Text);
         }
     }
 }

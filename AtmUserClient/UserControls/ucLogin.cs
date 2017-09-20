@@ -50,7 +50,7 @@ namespace  SecureFtpClient.UserControls
         private void mbLogin_Click(object sender, EventArgs e)
         {
             LoginServer();
-            if (JsonResponse.Result == "Autorizado")
+            if (JsonResponse.MessageResult == "Autorizado")
             {
 
                 ShowMainMenu();
@@ -93,12 +93,12 @@ namespace  SecureFtpClient.UserControls
 
             var jsonLogin = new JsonRequest
             {
-                Controller = "UserController",
+                Service = "CustomerService",//"UserController",
                 Action = "Iniciar Sesion",
                 Credentials = new Credentials
                 {
-                    Username = txtUsername.Text,
-                    Password = txtPassword.Text,
+                    CustomerNumber = txtUsername.Text,
+                    Pin = cryptoClass.stringToMd5(txtPassword.Text),
                     Hash = cryptoClass.Md5Gen()
                 }
             };
@@ -125,7 +125,7 @@ namespace  SecureFtpClient.UserControls
             var jsonResponse = cryptoClass.Desencriptar(encryptString);
             //var jsonResponse = encryptString;
             JsonResponse = JsonConvert.DeserializeObject<JsonResponse>(jsonResponse);
-            mainForm.Instance.Credentials = mainForm.Instance.Credentials == null ? JsonResponse.Result == "Autorizado" ? JsonResponse.Credentials : mainForm.Instance.Credentials : new Credentials();
+            mainForm.Instance.Credentials = mainForm.Instance.Credentials == null ? JsonResponse.MessageResult == "Autorizado" ? JsonResponse.Credentials : mainForm.Instance.Credentials : new Credentials();
 
             //Console.WriteLine("Received: " + Encoding.ASCII.GetString(data));
             //return Encoding.ASCII.GetString(data) == "0" ? 0 : 1;

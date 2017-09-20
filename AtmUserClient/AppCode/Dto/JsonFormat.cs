@@ -6,7 +6,7 @@ using  System.Threading.Tasks;
 
 namespace  SucursalElectronicaCliente.AppCode.Dto
 {
-    class JsonFormat
+    public class JsonFormat
     {
         public Credentials Credentials { get; set; }
     }

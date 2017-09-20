@@ -7,9 +7,12 @@ using  System.Threading.Tasks;
 
 namespace  SucursalElectronicaCliente.AppCode.Dto
 {
-    class JsonResponse : JsonFormat
+    public class JsonResponse : JsonFormat
     {
-        public string Result { get; set; }
+        public string MessageResult { get; set; }
+        public string CustomerNumber { get; set; }
+        public string CustomerName { get; set; }
+        public List<LogDto> Logs { get; set; }
         public UserDto UserAux { get; set; }
         public FileDto FileAux { get; set; }
         public List<UserDto> Users { get; set; }

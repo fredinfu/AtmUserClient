@@ -1,17 +1,17 @@
-﻿using  System;
-using  System.Collections.Generic;
-using  System.Linq;
-using  System.Security.Cryptography;
-using  System.Text;
-using  System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace  SucursalElectronicaCliente.AppCode
+namespace SucursalElectronicaCliente.AppCode.Repository
 {
-    public class CryptographyObject
+    public class CryptographyRepository
     {
         private string unlockKey;
         private const string APP_KEY = "25062017";
-        public CryptographyObject(string unlockKey)
+        public CryptographyRepository(string unlockKey)
         {
             this.unlockKey = unlockKey;
         }
@@ -19,12 +19,12 @@ namespace  SucursalElectronicaCliente.AppCode
         public string Md5Gen()
         {
             var md5 = new MD5CryptoServiceProvider();
-            unlockKey +=  APP_KEY;
+            unlockKey += APP_KEY;
             //Dim ServicioMD5 As New MD5CryptoServiceProvider
             var md5String = string.Empty;
             var bytes = Encoding.GetEncoding("Windows-1252").GetBytes(unlockKey);
             bytes = md5.ComputeHash(bytes);
-            foreach(var byteChar in bytes)
+            foreach (var byteChar in bytes)
             {
                 md5String += byteChar.ToString("X2").ToUpper();
             }
@@ -51,7 +51,7 @@ namespace  SucursalElectronicaCliente.AppCode
         {
             try
             {
-                string key = "fredinFunez"; //llave para encriptar datos
+                string key = "fredinFunez"; 
                 byte[] keyArray;
                 byte[] Arreglo_a_Cifrar = UTF8Encoding.UTF8.GetBytes(texto);
                 //Se utilizan las clases de encriptación MD5

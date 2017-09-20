@@ -29,20 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucMainMenu));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.mlBack = new MetroFramework.Controls.MetroLink();
-            this.mtFilePath = new MetroFramework.Controls.MetroLabel();
+            this.metroTile4 = new MetroFramework.Controls.MetroTile();
+            this.metroTile3 = new MetroFramework.Controls.MetroTile();
+            this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.mtExplore = new MetroFramework.Controls.MetroTile();
-            this.lblMbCuentaOrigen = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.mtMisArchivosDl = new MetroFramework.Controls.MetroTile();
-            this.mtShareDl = new MetroFramework.Controls.MetroTile();
+            this.metroLink2 = new MetroFramework.Controls.MetroLink();
+            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+            this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -59,11 +63,12 @@
             // 
             // metroTabPage2
             // 
-            this.metroTabPage2.Controls.Add(this.metroLabel3);
-            this.metroTabPage2.Controls.Add(this.mlBack);
-            this.metroTabPage2.Controls.Add(this.mtFilePath);
+            this.metroTabPage2.Controls.Add(this.metroTile5);
+            this.metroTabPage2.Controls.Add(this.metroTile4);
+            this.metroTabPage2.Controls.Add(this.metroTile3);
+            this.metroTabPage2.Controls.Add(this.metroTile2);
+            this.metroTabPage2.Controls.Add(this.metroTile1);
             this.metroTabPage2.Controls.Add(this.mtExplore);
-            this.metroTabPage2.Controls.Add(this.lblMbCuentaOrigen);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.HorizontalScrollbarSize = 12;
@@ -72,44 +77,60 @@
             this.metroTabPage2.Name = "metroTabPage2";
             this.metroTabPage2.Size = new System.Drawing.Size(1209, 430);
             this.metroTabPage2.TabIndex = 6;
-            this.metroTabPage2.Text = "&Subir Archivos";
+            this.metroTabPage2.Text = "&Operaciones";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 13;
             this.metroTabPage2.Click += new System.EventHandler(this.metroTabPage2_Click);
             // 
-            // metroLabel3
+            // metroTile4
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(16, 151);
-            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(91, 20);
-            this.metroLabel3.TabIndex = 14;
-            this.metroLabel3.Text = "Subir Archivo";
+            this.metroTile4.ActiveControl = null;
+            this.metroTile4.Location = new System.Drawing.Point(16, 327);
+            this.metroTile4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroTile4.Name = "metroTile4";
+            this.metroTile4.Size = new System.Drawing.Size(187, 66);
+            this.metroTile4.TabIndex = 15;
+            this.metroTile4.Text = "&Deposito";
+            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile4.UseSelectable = true;
             // 
-            // mlBack
+            // metroTile3
             // 
-            this.mlBack.Image = ((System.Drawing.Image)(resources.GetObject("mlBack.Image")));
-            this.mlBack.ImageSize = 32;
-            this.mlBack.Location = new System.Drawing.Point(16, 175);
-            this.mlBack.Margin = new System.Windows.Forms.Padding(4);
-            this.mlBack.Name = "mlBack";
-            this.mlBack.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("mlBack.NoFocusImage")));
-            this.mlBack.Size = new System.Drawing.Size(51, 43);
-            this.mlBack.TabIndex = 13;
-            this.mlBack.UseSelectable = true;
-            this.mlBack.Click += new System.EventHandler(this.mlBack_Click);
+            this.metroTile3.ActiveControl = null;
+            this.metroTile3.Location = new System.Drawing.Point(16, 257);
+            this.metroTile3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroTile3.Name = "metroTile3";
+            this.metroTile3.Size = new System.Drawing.Size(187, 66);
+            this.metroTile3.TabIndex = 14;
+            this.metroTile3.Text = "&Transferencias";
+            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile3.UseSelectable = true;
             // 
-            // mtFilePath
+            // metroTile2
             // 
-            this.mtFilePath.AutoSize = true;
-            this.mtFilePath.Location = new System.Drawing.Point(16, 118);
-            this.mtFilePath.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.mtFilePath.Name = "mtFilePath";
-            this.mtFilePath.Size = new System.Drawing.Size(18, 20);
-            this.mtFilePath.TabIndex = 12;
-            this.mtFilePath.Text = "...";
+            this.metroTile2.ActiveControl = null;
+            this.metroTile2.Location = new System.Drawing.Point(16, 187);
+            this.metroTile2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroTile2.Name = "metroTile2";
+            this.metroTile2.Size = new System.Drawing.Size(187, 66);
+            this.metroTile2.TabIndex = 13;
+            this.metroTile2.Text = "&Consultas";
+            this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile2.UseSelectable = true;
+            this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
+            // 
+            // metroTile1
+            // 
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Location = new System.Drawing.Point(16, 117);
+            this.metroTile1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(187, 66);
+            this.metroTile1.TabIndex = 12;
+            this.metroTile1.Text = "&Deposito";
+            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile1.UseSelectable = true;
             // 
             // mtExplore
             // 
@@ -119,25 +140,15 @@
             this.mtExplore.Name = "mtExplore";
             this.mtExplore.Size = new System.Drawing.Size(187, 66);
             this.mtExplore.TabIndex = 11;
-            this.mtExplore.Text = "Examinar...";
+            this.mtExplore.Text = "&Retiro";
+            this.mtExplore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.mtExplore.UseSelectable = true;
             this.mtExplore.Click += new System.EventHandler(this.mtExplore_Click);
             // 
-            // lblMbCuentaOrigen
-            // 
-            this.lblMbCuentaOrigen.AutoSize = true;
-            this.lblMbCuentaOrigen.Location = new System.Drawing.Point(16, 20);
-            this.lblMbCuentaOrigen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMbCuentaOrigen.Name = "lblMbCuentaOrigen";
-            this.lblMbCuentaOrigen.Size = new System.Drawing.Size(112, 20);
-            this.lblMbCuentaOrigen.TabIndex = 7;
-            this.lblMbCuentaOrigen.Text = "Archivos Propios";
-            // 
             // metroTabPage3
             // 
-            this.metroTabPage3.Controls.Add(this.metroLabel4);
-            this.metroTabPage3.Controls.Add(this.mtMisArchivosDl);
-            this.metroTabPage3.Controls.Add(this.mtShareDl);
+            this.metroTabPage3.Controls.Add(this.metroLink2);
+            this.metroTabPage3.Controls.Add(this.metroGrid1);
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.HorizontalScrollbarSize = 12;
@@ -146,44 +157,80 @@
             this.metroTabPage3.Name = "metroTabPage3";
             this.metroTabPage3.Size = new System.Drawing.Size(1209, 430);
             this.metroTabPage3.TabIndex = 16;
-            this.metroTabPage3.Text = "&Descargar Archivos";
+            this.metroTabPage3.Text = "&Bitacora";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 13;
             // 
-            // metroLabel4
+            // metroLink2
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(4, 18);
-            this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(235, 20);
-            this.metroLabel4.TabIndex = 8;
-            this.metroLabel4.Text = "Seleccione repositorio de descargas:";
+            this.metroLink2.Image = ((System.Drawing.Image)(resources.GetObject("metroLink2.Image")));
+            this.metroLink2.ImageSize = 32;
+            this.metroLink2.Location = new System.Drawing.Point(306, 3);
+            this.metroLink2.Name = "metroLink2";
+            this.metroLink2.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("metroLink2.NoFocusImage")));
+            this.metroLink2.Size = new System.Drawing.Size(215, 52);
+            this.metroLink2.TabIndex = 14;
+            this.metroLink2.Text = "                                Refrescar";
+            this.metroLink2.UseSelectable = true;
+            this.metroLink2.Click += new System.EventHandler(this.metroLink2_Click);
             // 
-            // mtMisArchivosDl
+            // metroGrid1
             // 
-            this.mtMisArchivosDl.ActiveControl = null;
-            this.mtMisArchivosDl.Location = new System.Drawing.Point(4, 40);
-            this.mtMisArchivosDl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mtMisArchivosDl.Name = "mtMisArchivosDl";
-            this.mtMisArchivosDl.Size = new System.Drawing.Size(187, 66);
-            this.mtMisArchivosDl.TabIndex = 5;
-            this.mtMisArchivosDl.Text = "Mis Archivos";
-            this.mtMisArchivosDl.UseSelectable = true;
-            this.mtMisArchivosDl.Click += new System.EventHandler(this.metroTile1_Click);
+            this.metroGrid1.AllowUserToResizeRows = false;
+            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.metroGrid1.EnableHeadersVisualStyles = false;
+            this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid1.Location = new System.Drawing.Point(58, 62);
+            this.metroGrid1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroGrid1.MultiSelect = false;
+            this.metroGrid1.Name = "metroGrid1";
+            this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metroGrid1.Size = new System.Drawing.Size(1093, 366);
+            this.metroGrid1.TabIndex = 13;
             // 
-            // mtShareDl
+            // metroTile5
             // 
-            this.mtShareDl.ActiveControl = null;
-            this.mtShareDl.Location = new System.Drawing.Point(4, 109);
-            this.mtShareDl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mtShareDl.Name = "mtShareDl";
-            this.mtShareDl.Size = new System.Drawing.Size(187, 66);
-            this.mtShareDl.TabIndex = 6;
-            this.mtShareDl.Text = "Archivos Permitidos";
-            this.mtShareDl.UseSelectable = true;
-            this.mtShareDl.Click += new System.EventHandler(this.mtShareDl_Click);
+            this.metroTile5.ActiveControl = null;
+            this.metroTile5.Location = new System.Drawing.Point(398, 47);
+            this.metroTile5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroTile5.Name = "metroTile5";
+            this.metroTile5.Size = new System.Drawing.Size(187, 66);
+            this.metroTile5.TabIndex = 16;
+            this.metroTile5.Text = "&Cambiar Pin";
+            this.metroTile5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile5.UseSelectable = true;
             // 
             // ucMainMenu
             // 
@@ -196,9 +243,8 @@
             this.Load += new System.EventHandler(this.ucMainMenu_Load);
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage2.ResumeLayout(false);
-            this.metroTabPage2.PerformLayout();
             this.metroTabPage3.ResumeLayout(false);
-            this.metroTabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -208,13 +254,13 @@
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private MetroFramework.Controls.MetroTabPage metroTabPage3;
-        private MetroFramework.Controls.MetroLabel lblMbCuentaOrigen;
         private MetroFramework.Controls.MetroTile mtExplore;
-        private MetroFramework.Controls.MetroLabel mtFilePath;
-        private MetroFramework.Controls.MetroLink mlBack;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroTile mtMisArchivosDl;
-        private MetroFramework.Controls.MetroTile mtShareDl;
+        private MetroFramework.Controls.MetroLink metroLink2;
+        private MetroFramework.Controls.MetroGrid metroGrid1;
+        private MetroFramework.Controls.MetroTile metroTile4;
+        private MetroFramework.Controls.MetroTile metroTile3;
+        private MetroFramework.Controls.MetroTile metroTile2;
+        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTile metroTile5;
     }
 }

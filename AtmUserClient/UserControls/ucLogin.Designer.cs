@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucLogin));
             this.mpLogin = new MetroFramework.Controls.MetroPanel();
+            this.mlExit = new MetroFramework.Controls.MetroLink();
             this.mlLoginTitle = new MetroFramework.Controls.MetroLink();
+            this.mlSettings = new MetroFramework.Controls.MetroLink();
             this.mbLogin = new MetroFramework.Controls.MetroButton();
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
             this.txtUsername = new MetroFramework.Controls.MetroTextBox();
-            this.mlExit = new MetroFramework.Controls.MetroLink();
-            this.mlSettings = new MetroFramework.Controls.MetroLink();
             this.mpSettings = new MetroFramework.Controls.MetroPanel();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.mtpConection = new MetroFramework.Controls.MetroTabPage();
@@ -66,15 +66,28 @@
             this.mpLogin.Controls.Add(this.txtUsername);
             this.mpLogin.HorizontalScrollbarBarColor = true;
             this.mpLogin.HorizontalScrollbarHighlightOnWheel = false;
-            this.mpLogin.HorizontalScrollbarSize = 8;
-            this.mpLogin.Location = new System.Drawing.Point(2, 162);
-            this.mpLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.mpLogin.HorizontalScrollbarSize = 10;
+            this.mpLogin.Location = new System.Drawing.Point(3, 199);
+            this.mpLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mpLogin.Name = "mpLogin";
-            this.mpLogin.Size = new System.Drawing.Size(861, 321);
+            this.mpLogin.Size = new System.Drawing.Size(1148, 395);
             this.mpLogin.TabIndex = 2;
             this.mpLogin.VerticalScrollbarBarColor = true;
             this.mpLogin.VerticalScrollbarHighlightOnWheel = false;
-            this.mpLogin.VerticalScrollbarSize = 8;
+            this.mpLogin.VerticalScrollbarSize = 11;
+            // 
+            // mlExit
+            // 
+            this.mlExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.mlExit.Image = ((System.Drawing.Image)(resources.GetObject("mlExit.Image")));
+            this.mlExit.ImageSize = 32;
+            this.mlExit.Location = new System.Drawing.Point(1069, 4);
+            this.mlExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mlExit.Name = "mlExit";
+            this.mlExit.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("mlExit.NoFocusImage")));
+            this.mlExit.Size = new System.Drawing.Size(37, 34);
+            this.mlExit.TabIndex = 0;
+            this.mlExit.UseSelectable = true;
             // 
             // mlLoginTitle
             // 
@@ -82,14 +95,28 @@
             this.mlLoginTitle.Image = ((System.Drawing.Image)(resources.GetObject("mlLoginTitle.Image")));
             this.mlLoginTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mlLoginTitle.ImageSize = 64;
-            this.mlLoginTitle.Location = new System.Drawing.Point(267, 24);
-            this.mlLoginTitle.Margin = new System.Windows.Forms.Padding(2);
+            this.mlLoginTitle.Location = new System.Drawing.Point(356, 30);
+            this.mlLoginTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mlLoginTitle.Name = "mlLoginTitle";
             this.mlLoginTitle.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("mlLoginTitle.NoFocusImage")));
-            this.mlLoginTitle.Size = new System.Drawing.Size(211, 54);
+            this.mlLoginTitle.Size = new System.Drawing.Size(281, 66);
             this.mlLoginTitle.TabIndex = 7;
             this.mlLoginTitle.Text = "      Login";
             this.mlLoginTitle.UseSelectable = true;
+            // 
+            // mlSettings
+            // 
+            this.mlSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.mlSettings.Image = ((System.Drawing.Image)(resources.GetObject("mlSettings.Image")));
+            this.mlSettings.ImageSize = 32;
+            this.mlSettings.Location = new System.Drawing.Point(1107, 4);
+            this.mlSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mlSettings.Name = "mlSettings";
+            this.mlSettings.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("mlSettings.NoFocusImage")));
+            this.mlSettings.Size = new System.Drawing.Size(37, 34);
+            this.mlSettings.TabIndex = 1;
+            this.mlSettings.UseSelectable = true;
+            this.mlSettings.Click += new System.EventHandler(this.mlSettings_Click);
             // 
             // mbLogin
             // 
@@ -97,10 +124,10 @@
             this.mbLogin.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.mbLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.mbLogin.Highlight = true;
-            this.mbLogin.Location = new System.Drawing.Point(389, 153);
-            this.mbLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.mbLogin.Location = new System.Drawing.Point(519, 188);
+            this.mbLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mbLogin.Name = "mbLogin";
-            this.mbLogin.Size = new System.Drawing.Size(89, 26);
+            this.mbLogin.Size = new System.Drawing.Size(119, 32);
             this.mbLogin.TabIndex = 6;
             this.mbLogin.Text = "&Entrar";
             this.mbLogin.UseSelectable = true;
@@ -116,10 +143,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.CustomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.CustomButton.Image = null;
-            this.txtPassword.CustomButton.Location = new System.Drawing.Point(183, 2);
-            this.txtPassword.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.CustomButton.Location = new System.Drawing.Point(245, 1);
+            this.txtPassword.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.CustomButton.Name = "";
-            this.txtPassword.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtPassword.CustomButton.Size = new System.Drawing.Size(35, 35);
             this.txtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPassword.CustomButton.TabIndex = 1;
             this.txtPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -128,21 +155,21 @@
             this.txtPassword.DisplayIcon = true;
             this.txtPassword.Icon = ((System.Drawing.Image)(resources.GetObject("txtPassword.Icon")));
             this.txtPassword.Lines = new string[0];
-            this.txtPassword.Location = new System.Drawing.Point(267, 119);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Location = new System.Drawing.Point(356, 146);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.PromptText = "Password";
+            this.txtPassword.PromptText = "PIN";
             this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPassword.SelectedText = "";
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.ShortcutsEnabled = true;
-            this.txtPassword.Size = new System.Drawing.Size(211, 30);
+            this.txtPassword.Size = new System.Drawing.Size(281, 37);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.UseSelectable = true;
-            this.txtPassword.WaterMark = "Password";
+            this.txtPassword.WaterMark = "PIN";
             this.txtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -156,10 +183,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsername.CustomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.CustomButton.Image = null;
-            this.txtUsername.CustomButton.Location = new System.Drawing.Point(183, 2);
-            this.txtUsername.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsername.CustomButton.Location = new System.Drawing.Point(245, 1);
+            this.txtUsername.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.CustomButton.Name = "";
-            this.txtUsername.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtUsername.CustomButton.Size = new System.Drawing.Size(35, 35);
             this.txtUsername.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtUsername.CustomButton.TabIndex = 1;
             this.txtUsername.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -168,48 +195,23 @@
             this.txtUsername.DisplayIcon = true;
             this.txtUsername.Icon = ((System.Drawing.Image)(resources.GetObject("txtUsername.Icon")));
             this.txtUsername.Lines = new string[0];
-            this.txtUsername.Location = new System.Drawing.Point(267, 84);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsername.Location = new System.Drawing.Point(356, 103);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.PromptText = "Usuario";
+            this.txtUsername.PromptText = "NUMERO";
             this.txtUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtUsername.SelectedText = "";
             this.txtUsername.SelectionLength = 0;
             this.txtUsername.SelectionStart = 0;
             this.txtUsername.ShortcutsEnabled = true;
-            this.txtUsername.Size = new System.Drawing.Size(211, 30);
+            this.txtUsername.Size = new System.Drawing.Size(281, 37);
             this.txtUsername.TabIndex = 4;
             this.txtUsername.UseSelectable = true;
-            this.txtUsername.WaterMark = "Usuario";
+            this.txtUsername.WaterMark = "NUMERO";
             this.txtUsername.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtUsername.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // mlExit
-            // 
-            this.mlExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.mlExit.Image = ((System.Drawing.Image)(resources.GetObject("mlExit.Image")));
-            this.mlExit.ImageSize = 32;
-            this.mlExit.Location = new System.Drawing.Point(802, 3);
-            this.mlExit.Name = "mlExit";
-            this.mlExit.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("mlExit.NoFocusImage")));
-            this.mlExit.Size = new System.Drawing.Size(28, 28);
-            this.mlExit.TabIndex = 0;
-            this.mlExit.UseSelectable = true;
-            // 
-            // mlSettings
-            // 
-            this.mlSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.mlSettings.Image = ((System.Drawing.Image)(resources.GetObject("mlSettings.Image")));
-            this.mlSettings.ImageSize = 32;
-            this.mlSettings.Location = new System.Drawing.Point(830, 3);
-            this.mlSettings.Name = "mlSettings";
-            this.mlSettings.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("mlSettings.NoFocusImage")));
-            this.mlSettings.Size = new System.Drawing.Size(28, 28);
-            this.mlSettings.TabIndex = 1;
-            this.mlSettings.UseSelectable = true;
-            this.mlSettings.Click += new System.EventHandler(this.mlSettings_Click);
             // 
             // mpSettings
             // 
@@ -219,25 +221,25 @@
             this.mpSettings.Controls.Add(this.mlBackSettings);
             this.mpSettings.HorizontalScrollbarBarColor = true;
             this.mpSettings.HorizontalScrollbarHighlightOnWheel = false;
-            this.mpSettings.HorizontalScrollbarSize = 8;
-            this.mpSettings.Location = new System.Drawing.Point(629, 0);
-            this.mpSettings.Margin = new System.Windows.Forms.Padding(2);
+            this.mpSettings.HorizontalScrollbarSize = 10;
+            this.mpSettings.Location = new System.Drawing.Point(839, 0);
+            this.mpSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mpSettings.Name = "mpSettings";
-            this.mpSettings.Size = new System.Drawing.Size(232, 610);
+            this.mpSettings.Size = new System.Drawing.Size(309, 751);
             this.mpSettings.TabIndex = 3;
             this.mpSettings.VerticalScrollbarBarColor = true;
             this.mpSettings.VerticalScrollbarHighlightOnWheel = false;
-            this.mpSettings.VerticalScrollbarSize = 8;
+            this.mpSettings.VerticalScrollbarSize = 11;
             this.mpSettings.Visible = false;
             // 
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.mtpConection);
-            this.metroTabControl1.Location = new System.Drawing.Point(2, 54);
-            this.metroTabControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.metroTabControl1.Location = new System.Drawing.Point(3, 66);
+            this.metroTabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(227, 386);
+            this.metroTabControl1.Size = new System.Drawing.Size(303, 475);
             this.metroTabControl1.TabIndex = 3;
             this.metroTabControl1.UseSelectable = true;
             // 
@@ -254,16 +256,16 @@
             this.mtpConection.Controls.Add(this.mlServer);
             this.mtpConection.HorizontalScrollbarBarColor = true;
             this.mtpConection.HorizontalScrollbarHighlightOnWheel = false;
-            this.mtpConection.HorizontalScrollbarSize = 8;
+            this.mtpConection.HorizontalScrollbarSize = 10;
             this.mtpConection.Location = new System.Drawing.Point(4, 38);
-            this.mtpConection.Margin = new System.Windows.Forms.Padding(2);
+            this.mtpConection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtpConection.Name = "mtpConection";
-            this.mtpConection.Size = new System.Drawing.Size(219, 344);
+            this.mtpConection.Size = new System.Drawing.Size(295, 433);
             this.mtpConection.TabIndex = 0;
             this.mtpConection.Text = "&Conexión";
             this.mtpConection.VerticalScrollbarBarColor = true;
             this.mtpConection.VerticalScrollbarHighlightOnWheel = false;
-            this.mtpConection.VerticalScrollbarSize = 8;
+            this.mtpConection.VerticalScrollbarSize = 11;
             // 
             // txtServerPassword
             // 
@@ -271,10 +273,10 @@
             // 
             // 
             this.txtServerPassword.CustomButton.Image = null;
-            this.txtServerPassword.CustomButton.Location = new System.Drawing.Point(134, 2);
-            this.txtServerPassword.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.txtServerPassword.CustomButton.Location = new System.Drawing.Point(239, 1);
+            this.txtServerPassword.CustomButton.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtServerPassword.CustomButton.Name = "";
-            this.txtServerPassword.CustomButton.Size = new System.Drawing.Size(15, 15);
+            this.txtServerPassword.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.txtServerPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtServerPassword.CustomButton.TabIndex = 1;
             this.txtServerPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -282,8 +284,8 @@
             this.txtServerPassword.CustomButton.Visible = false;
             this.txtServerPassword.Lines = new string[] {
         "******"};
-            this.txtServerPassword.Location = new System.Drawing.Point(23, 181);
-            this.txtServerPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtServerPassword.Location = new System.Drawing.Point(31, 223);
+            this.txtServerPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtServerPassword.MaxLength = 32767;
             this.txtServerPassword.Name = "txtServerPassword";
             this.txtServerPassword.PasswordChar = '*';
@@ -292,7 +294,7 @@
             this.txtServerPassword.SelectionLength = 0;
             this.txtServerPassword.SelectionStart = 0;
             this.txtServerPassword.ShortcutsEnabled = true;
-            this.txtServerPassword.Size = new System.Drawing.Size(152, 20);
+            this.txtServerPassword.Size = new System.Drawing.Size(203, 25);
             this.txtServerPassword.TabIndex = 9;
             this.txtServerPassword.Text = "******";
             this.txtServerPassword.UseSelectable = true;
@@ -302,20 +304,19 @@
             // mlPassword
             // 
             this.mlPassword.AutoSize = true;
-            this.mlPassword.Location = new System.Drawing.Point(23, 162);
-            this.mlPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.mlPassword.Location = new System.Drawing.Point(31, 199);
             this.mlPassword.Name = "mlPassword";
-            this.mlPassword.Size = new System.Drawing.Size(66, 19);
+            this.mlPassword.Size = new System.Drawing.Size(69, 20);
             this.mlPassword.TabIndex = 8;
             this.mlPassword.Text = "Password:";
             // 
             // metroButton1
             // 
             this.metroButton1.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.metroButton1.Location = new System.Drawing.Point(23, 215);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.metroButton1.Location = new System.Drawing.Point(31, 265);
+            this.metroButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(152, 23);
+            this.metroButton1.Size = new System.Drawing.Size(203, 28);
             this.metroButton1.TabIndex = 4;
             this.metroButton1.Text = "&probar conexión";
             this.metroButton1.UseSelectable = true;
@@ -326,10 +327,10 @@
             // 
             // 
             this.txtServerUser.CustomButton.Image = null;
-            this.txtServerUser.CustomButton.Location = new System.Drawing.Point(134, 2);
-            this.txtServerUser.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.txtServerUser.CustomButton.Location = new System.Drawing.Point(239, 1);
+            this.txtServerUser.CustomButton.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtServerUser.CustomButton.Name = "";
-            this.txtServerUser.CustomButton.Size = new System.Drawing.Size(15, 15);
+            this.txtServerUser.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.txtServerUser.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtServerUser.CustomButton.TabIndex = 1;
             this.txtServerUser.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -337,8 +338,8 @@
             this.txtServerUser.CustomButton.Visible = false;
             this.txtServerUser.Lines = new string[] {
         "admin"};
-            this.txtServerUser.Location = new System.Drawing.Point(23, 134);
-            this.txtServerUser.Margin = new System.Windows.Forms.Padding(2);
+            this.txtServerUser.Location = new System.Drawing.Point(31, 165);
+            this.txtServerUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtServerUser.MaxLength = 32767;
             this.txtServerUser.Name = "txtServerUser";
             this.txtServerUser.PasswordChar = '\0';
@@ -347,7 +348,7 @@
             this.txtServerUser.SelectionLength = 0;
             this.txtServerUser.SelectionStart = 0;
             this.txtServerUser.ShortcutsEnabled = true;
-            this.txtServerUser.Size = new System.Drawing.Size(152, 20);
+            this.txtServerUser.Size = new System.Drawing.Size(203, 25);
             this.txtServerUser.TabIndex = 7;
             this.txtServerUser.Text = "admin";
             this.txtServerUser.UseSelectable = true;
@@ -357,10 +358,9 @@
             // mlUser
             // 
             this.mlUser.AutoSize = true;
-            this.mlUser.Location = new System.Drawing.Point(23, 115);
-            this.mlUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.mlUser.Location = new System.Drawing.Point(31, 142);
             this.mlUser.Name = "mlUser";
-            this.mlUser.Size = new System.Drawing.Size(56, 19);
+            this.mlUser.Size = new System.Drawing.Size(59, 20);
             this.mlUser.TabIndex = 6;
             this.mlUser.Text = "Usuario:";
             // 
@@ -370,10 +370,10 @@
             // 
             // 
             this.txtPort.CustomButton.Image = null;
-            this.txtPort.CustomButton.Location = new System.Drawing.Point(134, 2);
-            this.txtPort.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPort.CustomButton.Location = new System.Drawing.Point(239, 1);
+            this.txtPort.CustomButton.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtPort.CustomButton.Name = "";
-            this.txtPort.CustomButton.Size = new System.Drawing.Size(15, 15);
+            this.txtPort.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.txtPort.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPort.CustomButton.TabIndex = 1;
             this.txtPort.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -381,8 +381,8 @@
             this.txtPort.CustomButton.Visible = false;
             this.txtPort.Lines = new string[] {
         "0000"};
-            this.txtPort.Location = new System.Drawing.Point(23, 87);
-            this.txtPort.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPort.Location = new System.Drawing.Point(31, 107);
+            this.txtPort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPort.MaxLength = 32767;
             this.txtPort.Name = "txtPort";
             this.txtPort.PasswordChar = '\0';
@@ -391,7 +391,7 @@
             this.txtPort.SelectionLength = 0;
             this.txtPort.SelectionStart = 0;
             this.txtPort.ShortcutsEnabled = true;
-            this.txtPort.Size = new System.Drawing.Size(152, 20);
+            this.txtPort.Size = new System.Drawing.Size(203, 25);
             this.txtPort.TabIndex = 5;
             this.txtPort.Text = "0000";
             this.txtPort.UseSelectable = true;
@@ -401,10 +401,9 @@
             // mlPort
             // 
             this.mlPort.AutoSize = true;
-            this.mlPort.Location = new System.Drawing.Point(23, 68);
-            this.mlPort.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.mlPort.Location = new System.Drawing.Point(31, 84);
             this.mlPort.Name = "mlPort";
-            this.mlPort.Size = new System.Drawing.Size(52, 19);
+            this.mlPort.Size = new System.Drawing.Size(54, 20);
             this.mlPort.TabIndex = 4;
             this.mlPort.Text = "Puerto:";
             // 
@@ -414,10 +413,10 @@
             // 
             // 
             this.txtServerName.CustomButton.Image = null;
-            this.txtServerName.CustomButton.Location = new System.Drawing.Point(134, 2);
-            this.txtServerName.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.txtServerName.CustomButton.Location = new System.Drawing.Point(239, 1);
+            this.txtServerName.CustomButton.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtServerName.CustomButton.Name = "";
-            this.txtServerName.CustomButton.Size = new System.Drawing.Size(15, 15);
+            this.txtServerName.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.txtServerName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtServerName.CustomButton.TabIndex = 1;
             this.txtServerName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -425,8 +424,8 @@
             this.txtServerName.CustomButton.Visible = false;
             this.txtServerName.Lines = new string[] {
         "192.168.1.194"};
-            this.txtServerName.Location = new System.Drawing.Point(23, 39);
-            this.txtServerName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtServerName.Location = new System.Drawing.Point(31, 48);
+            this.txtServerName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtServerName.MaxLength = 32767;
             this.txtServerName.Name = "txtServerName";
             this.txtServerName.PasswordChar = '\0';
@@ -435,7 +434,7 @@
             this.txtServerName.SelectionLength = 0;
             this.txtServerName.SelectionStart = 0;
             this.txtServerName.ShortcutsEnabled = true;
-            this.txtServerName.Size = new System.Drawing.Size(152, 20);
+            this.txtServerName.Size = new System.Drawing.Size(203, 25);
             this.txtServerName.TabIndex = 3;
             this.txtServerName.Text = "192.168.1.194";
             this.txtServerName.UseSelectable = true;
@@ -445,10 +444,9 @@
             // mlServer
             // 
             this.mlServer.AutoSize = true;
-            this.mlServer.Location = new System.Drawing.Point(23, 20);
-            this.mlServer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.mlServer.Location = new System.Drawing.Point(31, 25);
             this.mlServer.Name = "mlServer";
-            this.mlServer.Size = new System.Drawing.Size(63, 19);
+            this.mlServer.Size = new System.Drawing.Size(65, 20);
             this.mlServer.TabIndex = 2;
             this.mlServer.Text = "Servidor:";
             // 
@@ -459,11 +457,11 @@
             this.mlBackSettings.Image = ((System.Drawing.Image)(resources.GetObject("mlBackSettings.Image")));
             this.mlBackSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mlBackSettings.ImageSize = 32;
-            this.mlBackSettings.Location = new System.Drawing.Point(2, 3);
-            this.mlBackSettings.Margin = new System.Windows.Forms.Padding(2);
+            this.mlBackSettings.Location = new System.Drawing.Point(3, 4);
+            this.mlBackSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mlBackSettings.Name = "mlBackSettings";
             this.mlBackSettings.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("mlBackSettings.NoFocusImage")));
-            this.mlBackSettings.Size = new System.Drawing.Size(207, 37);
+            this.mlBackSettings.Size = new System.Drawing.Size(276, 46);
             this.mlBackSettings.TabIndex = 2;
             this.mlBackSettings.Text = "&Configuraciones";
             this.mlBackSettings.UseSelectable = true;
@@ -471,12 +469,13 @@
             // 
             // ucLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.mpLogin);
             this.Controls.Add(this.mpSettings);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ucLogin";
-            this.Size = new System.Drawing.Size(861, 610);
+            this.Size = new System.Drawing.Size(1148, 751);
             this.mpLogin.ResumeLayout(false);
             this.mpSettings.ResumeLayout(false);
             this.metroTabControl1.ResumeLayout(false);

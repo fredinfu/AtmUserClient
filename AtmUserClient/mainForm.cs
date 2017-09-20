@@ -47,20 +47,7 @@ namespace  SecureFtpClient
                 jsonResponse = value;
             }
         }
-        internal string SafeFileNameSelected
-        {
-            get
-            {
-                if (safeFileNameSelected == string.Empty)
-                    safeFileNameSelected = "NoFileSelected";
-                return safeFileNameSelected;
-            }
-
-            set
-            {
-                safeFileNameSelected = value;
-            }
-        }
+      
         public Socket ClientSocket
         {
             get
@@ -129,6 +116,7 @@ namespace  SecureFtpClient
             mpMainPanel.Controls.Add(new ucLogin { Dock = DockStyle.Fill });
             mpMainPanel.Controls.Add(new ucMisArchivosDescarga { Dock = DockStyle.Fill });
             mpMainPanel.Controls.Add(new ucArchivosPermitidosDescarga { Dock = DockStyle.Fill });
+            mpMainPanel.Controls.Add(new ucConsultaDeSaldo { Dock = DockStyle.Fill });
         }
 
         private void mlBack_Click(object sender, EventArgs e)
@@ -149,6 +137,10 @@ namespace  SecureFtpClient
             Instance.MetroBack.Visible = true;
         }
 
+        #region Account
+
+        #endregion
+
         #region Files
         public void GetMisArchivosDescarga()
         {
@@ -159,7 +151,7 @@ namespace  SecureFtpClient
                 {
                     _clientSocket.Connect(IPAddress.Loopback, 100);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     return;
                 }
@@ -176,12 +168,12 @@ namespace  SecureFtpClient
 
             var jsonRequest = new JsonRequest
             {
-                Controller = "FileController",
+                Service = "FileController",
                 Action = "Listar Archivos",
                 Credentials = new Credentials
                 {
-                    Username = Instance.Credentials.Username,
-                    Password = Instance.Credentials.Password,
+                    CustomerNumber = Instance.Credentials.CustomerNumber,
+                    Pin = Instance.Credentials.Pin,
                     Hash = cryptoClass.Md5Gen()
                 }
             };
@@ -205,7 +197,7 @@ namespace  SecureFtpClient
             var encryptString = Encoding.ASCII.GetString(data);
             var jsonResponse = cryptoClass.Desencriptar(encryptString);
             JsonResponse = JsonConvert.DeserializeObject<JsonResponse>(jsonResponse);
-            if (JsonResponse.Result == "Invalid")
+            if (JsonResponse.MessageResult == "Invalid")
             {
                 MessageBox.Show("No se pudo completar la acción.");
                 return;
@@ -254,12 +246,12 @@ namespace  SecureFtpClient
 
                 var jsonRequest = new JsonRequest
                 {
-                    Controller = "FileController",
+                    Service = "FileController",
                     Action = "Subir Archivo",
                     Credentials = new Credentials
                     {
-                        Username = Instance.Credentials.Username,
-                        Password = Instance.Credentials.Password,
+                        CustomerNumber = Instance.Credentials.CustomerNumber,
+                        Pin = Instance.Credentials.Pin,
                         Hash = cryptoClass.Md5Gen(),
 
                     },
@@ -294,12 +286,12 @@ namespace  SecureFtpClient
                 var encryptString = Encoding.ASCII.GetString(data);
                 var jsonResponse = cryptoClass.Desencriptar(encryptString);
                 JsonResponse = JsonConvert.DeserializeObject<JsonResponse>(jsonResponse);
-                if (JsonResponse.Result == "Invalid Request")
+                if (JsonResponse.MessageResult == "Invalid Request")
                 {
                     MessageBox.Show("No se pudo completar la acción.");
                     return;
                 }
-                MessageBox.Show(JsonResponse.Result);
+                MessageBox.Show(JsonResponse.MessageResult);
             }
             catch (Exception ex)
             {
@@ -333,12 +325,12 @@ namespace  SecureFtpClient
             var cryptoClass = new CryptographyObject(idClient);
             var jsonRequest = new JsonRequest
             {
-                Controller = "FileController",
+                Service = "FileController",
                 Action = "Listar Archivos Compartidos",
                 Credentials = new Credentials
                 {
-                    Username = Instance.Credentials.Username,
-                    Password = Instance.Credentials.Password,
+                    CustomerNumber = Instance.Credentials.CustomerNumber,
+                    Pin = Instance.Credentials.Pin,
                     Hash = cryptoClass.Md5Gen()
                 }
             };
@@ -360,12 +352,12 @@ namespace  SecureFtpClient
             var jsonResponse = cryptoClass.Desencriptar(encryptString);
 
             JsonResponse = JsonConvert.DeserializeObject<JsonResponse>(jsonResponse);
-            if (JsonResponse.Result == "Invalid Request")
+            if (JsonResponse.MessageResult == "Invalid Request")
             {
                 MessageBox.Show("No se pudo completar la acción.");
                 return;
             }
-            MessageBox.Show(JsonResponse.Result);
+            MessageBox.Show(JsonResponse.MessageResult);
             Instance.fileRepository.Files = JsonResponse.Files;
             Instance.userRepository.Users = JsonResponse.Users;
             //ucMisArchivosDescarga.Instance.fileRepository.Files = JsonResponse.Files;
