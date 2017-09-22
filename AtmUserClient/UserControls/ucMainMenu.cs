@@ -100,7 +100,7 @@ namespace SecureFtpClient.UserControls
 
         private void mtExplore_Click(object sender, EventArgs e)
         {
-
+            ShowRetiroUI();
             return;
             var dialog = new OpenFileDialog();
             dialog.Title = "Selecciona tu archivo";
@@ -108,7 +108,7 @@ namespace SecureFtpClient.UserControls
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 //mtFilePath.Text = dialog.FileName;
-                mainForm.Instance.SafeFileNameSelected = dialog.SafeFileName;
+                //mainForm.Instance.SafeFileNameSelected = dialog.SafeFileName;
             }
             //var openFileDialog1 = new OpenFileDialog();
             //if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -175,6 +175,16 @@ namespace SecureFtpClient.UserControls
         {
             BringToFront(typeof(ucConsultaDeSaldo).Name);
             ucConsultaDeSaldo.Instance.LoadDataForm();
+        }
+
+        private void metroTile3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTile1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

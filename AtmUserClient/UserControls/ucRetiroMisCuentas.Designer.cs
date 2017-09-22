@@ -42,9 +42,9 @@
             this.mlCuenta.AutoSize = true;
             this.mlCuenta.Location = new System.Drawing.Point(16, 30);
             this.mlCuenta.Name = "mlCuenta";
-            this.mlCuenta.Size = new System.Drawing.Size(87, 20);
+            this.mlCuenta.Size = new System.Drawing.Size(84, 20);
             this.mlCuenta.TabIndex = 1;
-            this.mlCuenta.Text = "Mis Archivos";
+            this.mlCuenta.Text = "Mis Cuentas";
             // 
             // mcbCuentaBancaria
             // 

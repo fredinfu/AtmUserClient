@@ -117,6 +117,7 @@ namespace  SecureFtpClient
             mpMainPanel.Controls.Add(new ucMisArchivosDescarga { Dock = DockStyle.Fill });
             mpMainPanel.Controls.Add(new ucArchivosPermitidosDescarga { Dock = DockStyle.Fill });
             mpMainPanel.Controls.Add(new ucConsultaDeSaldo { Dock = DockStyle.Fill });
+            mpMainPanel.Controls.Add(new ucRetiroMisCuentas { Dock = DockStyle.Fill });
         }
 
         private void mlBack_Click(object sender, EventArgs e)

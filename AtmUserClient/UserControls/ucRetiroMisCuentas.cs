@@ -15,13 +15,10 @@ namespace  SecureFtpClient.UserControls
 {
     public partial class ucRetiroMisCuentas : ucBase
     {
-        public FileRepository fileRepository { get; set; }
-        public bool download { get; private set; }
         public ucRetiroMisCuentas()
         {
-            fileRepository = new FileRepository();
+            //fileRepository = new FileRepository();
             InitializeComponent();
-            InitializeGrid();
         }
         static ucRetiroMisCuentas _instance;
 
@@ -39,6 +36,17 @@ namespace  SecureFtpClient.UserControls
 
         public override void LoadDataForm()
         {
+            ////if (mainForm.Instance.fileRepository.Files != null)
+            //{
+            //    var files = mainForm.Instance.fileRepository.Files;
+            //    Invoke((MethodInvoker)(delegate
+            //    {
+            //        //metroGrid1.Font = new Font("Segoe UI", 11f, FontStyle.Regular, GraphicsUnit.Pixel);
+            //        //metroGrid1.AllowUserToAddRows = false;
+            //        //metroGrid1.DataSource = files;
+            //    }));
+            //}
+
             //if (!fileRepository.Files.Any()) return;
             //Invoke((MethodInvoker)(delegate
             //{
@@ -46,69 +54,6 @@ namespace  SecureFtpClient.UserControls
             //}));
         }
 
-        public override void Download(bool set)
-        {
-            //mlDownload.Visible = set;
-            //mlDownload.Enabled = set;
-        }
-
-        private void InitializeGrid()
-        {
-            //metroGrid1.Font = new Font("Segoe UI", 11f, FontStyle.Regular, GraphicsUnit.Pixel);
-            //metroGrid1.AllowUserToAddRows = false;
-            return;
-            if (mainForm.Instance.fileRepository.Files != null)
-            {
-                var files = mainForm.Instance.fileRepository.Files;
-                Invoke((MethodInvoker)(delegate
-                {
-                    //metroGrid1.Font = new Font("Segoe UI", 11f, FontStyle.Regular, GraphicsUnit.Pixel);
-                    //metroGrid1.AllowUserToAddRows = false;
-                    //metroGrid1.DataSource = files;
-                }));
-            }
-            Invoke((MethodInvoker)(delegate
-            {
-                //metroGrid1.Font = new Font("Segoe UI", 11f, FontStyle.Regular, GraphicsUnit.Pixel);
-                //metroGrid1.AllowUserToAddRows = false;
-                //metroGrid1.DataSource = fileRepository.Files == null ? new List<FileDto>() : fileRepository.Files;
-            }));
-
-        }
-
-        private object GetConsultasBancarias()
-        {
-            return new List<object> {
-                new
-                {
-                    Fecha = "01/01/2017",
-                    NombreArchivo = "video12341.mp4",
-                    Peso = "10 MB",
-                    Descripcion = "Video de cumple",
-                },
-                new
-                {
-                    Fecha = "01/01/2017",
-                    NombreArchivo = "video12341.mp4",
-                    Peso = "10 MB",
-                    Descripcion = "Video de cumple",
-                },
-                new
-                {
-                    Fecha = "01/01/2017",
-                    NombreArchivo = "video12341.mp4",
-                    Peso = "10 MB",
-                    Descripcion = "Video de cumple",
-                },
-                new
-                {
-                    Fecha = "01/01/2017",
-                    NombreArchivo = "video12341.mp4",
-                    Peso = "10 MB",
-                    Descripcion = "Video de cumple",
-                }
-            };
-        }
 
         private void metroGrid1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -140,11 +85,7 @@ namespace  SecureFtpClient.UserControls
 
         private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (download)
-            {
-                //mlDownload.Visible = true;
-                //mlDownload.Enabled = true;
-            }
+
 
         }
 
