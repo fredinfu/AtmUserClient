@@ -94,6 +94,30 @@
     <Compile Include="UserControls\ucConsultaDeSaldo.Designer.cs">
       <DependentUpon>ucConsultaDeSaldo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucDepositoCuenta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDepositoCuenta.Designer.cs">
+      <DependentUpon>ucDepositoCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucCambiarPin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCambiarPin.Designer.cs">
+      <DependentUpon>ucCambiarPin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucPagosDeProductos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucPagosDeProductos.Designer.cs">
+      <DependentUpon>ucPagosDeProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTransferencia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTransferencia.Designer.cs">
+      <DependentUpon>ucTransferencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucRetiroMisCuentas.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,6 +172,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucConsultaDeSaldo.resx">
       <DependentUpon>ucConsultaDeSaldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucDepositoCuenta.resx">
+      <DependentUpon>ucDepositoCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucCambiarPin.resx">
+      <DependentUpon>ucCambiarPin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucPagosDeProductos.resx">
+      <DependentUpon>ucPagosDeProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTransferencia.resx">
+      <DependentUpon>ucTransferencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucRetiroMisCuentas.resx">
       <DependentUpon>ucRetiroMisCuentas.cs</DependentUpon>

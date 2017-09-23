@@ -1,6 +1,6 @@
 ﻿namespace  SecureFtpClient.UserControls
 {
-    partial class ucRetiroMisCuentas
+    partial class ucDepositoCuenta
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucRetiroMisCuentas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucDepositoCuenta));
             this.mlCuenta = new MetroFramework.Controls.MetroLabel();
-            this.mcbCuentaBancaria = new MetroFramework.Controls.MetroComboBox();
             this.metroLink2 = new MetroFramework.Controls.MetroLink();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtUsername = new MetroFramework.Controls.MetroTextBox();
@@ -42,34 +41,17 @@
             // mlCuenta
             // 
             this.mlCuenta.AutoSize = true;
-            this.mlCuenta.Location = new System.Drawing.Point(16, 30);
+            this.mlCuenta.Location = new System.Drawing.Point(24, 150);
             this.mlCuenta.Name = "mlCuenta";
-            this.mlCuenta.Size = new System.Drawing.Size(84, 20);
+            this.mlCuenta.Size = new System.Drawing.Size(136, 20);
             this.mlCuenta.TabIndex = 1;
-            this.mlCuenta.Text = "Mis Cuentas";
-            // 
-            // mcbCuentaBancaria
-            // 
-            this.mcbCuentaBancaria.FormattingEnabled = true;
-            this.mcbCuentaBancaria.ItemHeight = 24;
-            this.mcbCuentaBancaria.Items.AddRange(new object[] {
-            "Cuenta Ahorro 70824536",
-            "Planilla Sueldo 70819878"});
-            this.mcbCuentaBancaria.Location = new System.Drawing.Point(83, 30);
-            this.mcbCuentaBancaria.Margin = new System.Windows.Forms.Padding(4);
-            this.mcbCuentaBancaria.Name = "mcbCuentaBancaria";
-            this.mcbCuentaBancaria.PromptText = "&Seleccione una cuenta";
-            this.mcbCuentaBancaria.Size = new System.Drawing.Size(283, 30);
-            this.mcbCuentaBancaria.TabIndex = 9;
-            this.mcbCuentaBancaria.UseSelectable = true;
-            this.mcbCuentaBancaria.Visible = false;
-            this.mcbCuentaBancaria.SelectedIndexChanged += new System.EventHandler(this.mcbCuentaBancaria_SelectedIndexChanged);
+            this.mlCuenta.Text = "Deposita a tu cuenta";
             // 
             // metroLink2
             // 
             this.metroLink2.Image = ((System.Drawing.Image)(resources.GetObject("metroLink2.Image")));
             this.metroLink2.ImageSize = 32;
-            this.metroLink2.Location = new System.Drawing.Point(16, 67);
+            this.metroLink2.Location = new System.Drawing.Point(166, 140);
             this.metroLink2.Name = "metroLink2";
             this.metroLink2.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("metroLink2.NoFocusImage")));
             this.metroLink2.Size = new System.Drawing.Size(215, 52);
@@ -81,7 +63,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(6, 18);
+            this.metroLabel1.Location = new System.Drawing.Point(12, 18);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(66, 20);
             this.metroLabel1.TabIndex = 13;
@@ -109,7 +91,7 @@
             this.txtUsername.DisplayIcon = true;
             this.txtUsername.Icon = ((System.Drawing.Image)(resources.GetObject("txtUsername.Icon")));
             this.txtUsername.Lines = new string[0];
-            this.txtUsername.Location = new System.Drawing.Point(6, 40);
+            this.txtUsername.Location = new System.Drawing.Point(12, 40);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.Name = "txtUsername";
@@ -133,12 +115,12 @@
             this.mbLogin.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.mbLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.mbLogin.Highlight = true;
-            this.mbLogin.Location = new System.Drawing.Point(6, 95);
+            this.mbLogin.Location = new System.Drawing.Point(12, 117);
             this.mbLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mbLogin.Name = "mbLogin";
             this.mbLogin.Size = new System.Drawing.Size(119, 32);
             this.mbLogin.TabIndex = 15;
-            this.mbLogin.Text = "&Retirar";
+            this.mbLogin.Text = "&Depositar";
             this.mbLogin.UseSelectable = true;
             // 
             // groupBox1
@@ -146,23 +128,22 @@
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Controls.Add(this.mbLogin);
             this.groupBox1.Controls.Add(this.txtUsername);
-            this.groupBox1.Location = new System.Drawing.Point(16, 30);
+            this.groupBox1.Location = new System.Drawing.Point(24, 26);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(423, 343);
+            this.groupBox1.Size = new System.Drawing.Size(443, 295);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Retiro Efectivo";
+            this.groupBox1.Text = "Deposita a tu cuenta";
             // 
-            // ucRetiroMisCuentas
+            // ucDepositoCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.metroLink2);
-            this.Controls.Add(this.mcbCuentaBancaria);
             this.Controls.Add(this.mlCuenta);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "ucRetiroMisCuentas";
+            this.Name = "ucDepositoCuenta";
             this.Size = new System.Drawing.Size(1128, 602);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -173,7 +154,6 @@
 
         #endregion
         private MetroFramework.Controls.MetroLabel mlCuenta;
-        private MetroFramework.Controls.MetroComboBox mcbCuentaBancaria;
         private MetroFramework.Controls.MetroLink metroLink2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox txtUsername;

@@ -1,6 +1,6 @@
 ﻿namespace  SecureFtpClient.UserControls
 {
-    partial class ucRetiroMisCuentas
+    partial class ucCambiarPin
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,64 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucRetiroMisCuentas));
-            this.mlCuenta = new MetroFramework.Controls.MetroLabel();
-            this.mcbCuentaBancaria = new MetroFramework.Controls.MetroComboBox();
-            this.metroLink2 = new MetroFramework.Controls.MetroLink();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucCambiarPin));
             this.txtUsername = new MetroFramework.Controls.MetroTextBox();
             this.mbLogin = new MetroFramework.Controls.MetroButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // mlCuenta
-            // 
-            this.mlCuenta.AutoSize = true;
-            this.mlCuenta.Location = new System.Drawing.Point(16, 30);
-            this.mlCuenta.Name = "mlCuenta";
-            this.mlCuenta.Size = new System.Drawing.Size(84, 20);
-            this.mlCuenta.TabIndex = 1;
-            this.mlCuenta.Text = "Mis Cuentas";
-            // 
-            // mcbCuentaBancaria
-            // 
-            this.mcbCuentaBancaria.FormattingEnabled = true;
-            this.mcbCuentaBancaria.ItemHeight = 24;
-            this.mcbCuentaBancaria.Items.AddRange(new object[] {
-            "Cuenta Ahorro 70824536",
-            "Planilla Sueldo 70819878"});
-            this.mcbCuentaBancaria.Location = new System.Drawing.Point(83, 30);
-            this.mcbCuentaBancaria.Margin = new System.Windows.Forms.Padding(4);
-            this.mcbCuentaBancaria.Name = "mcbCuentaBancaria";
-            this.mcbCuentaBancaria.PromptText = "&Seleccione una cuenta";
-            this.mcbCuentaBancaria.Size = new System.Drawing.Size(283, 30);
-            this.mcbCuentaBancaria.TabIndex = 9;
-            this.mcbCuentaBancaria.UseSelectable = true;
-            this.mcbCuentaBancaria.Visible = false;
-            this.mcbCuentaBancaria.SelectedIndexChanged += new System.EventHandler(this.mcbCuentaBancaria_SelectedIndexChanged);
-            // 
-            // metroLink2
-            // 
-            this.metroLink2.Image = ((System.Drawing.Image)(resources.GetObject("metroLink2.Image")));
-            this.metroLink2.ImageSize = 32;
-            this.metroLink2.Location = new System.Drawing.Point(16, 67);
-            this.metroLink2.Name = "metroLink2";
-            this.metroLink2.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("metroLink2.NoFocusImage")));
-            this.metroLink2.Size = new System.Drawing.Size(215, 52);
-            this.metroLink2.TabIndex = 12;
-            this.metroLink2.Text = "                                Refrescar";
-            this.metroLink2.UseSelectable = true;
-            this.metroLink2.Click += new System.EventHandler(this.metroLink2_Click);
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(6, 18);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(66, 20);
-            this.metroLabel1.TabIndex = 13;
-            this.metroLabel1.Text = "Cantidad:";
             // 
             // txtUsername
             // 
@@ -109,12 +58,12 @@
             this.txtUsername.DisplayIcon = true;
             this.txtUsername.Icon = ((System.Drawing.Image)(resources.GetObject("txtUsername.Icon")));
             this.txtUsername.Lines = new string[0];
-            this.txtUsername.Location = new System.Drawing.Point(6, 40);
+            this.txtUsername.Location = new System.Drawing.Point(6, 61);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.PromptText = "Cantidad";
+            this.txtUsername.PromptText = "Confirmar el nuevo Pin";
             this.txtUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtUsername.SelectedText = "";
             this.txtUsername.SelectionLength = 0;
@@ -123,9 +72,10 @@
             this.txtUsername.Size = new System.Drawing.Size(281, 37);
             this.txtUsername.TabIndex = 14;
             this.txtUsername.UseSelectable = true;
-            this.txtUsername.WaterMark = "Cantidad";
+            this.txtUsername.WaterMark = "Confirmar el nuevo Pin";
             this.txtUsername.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtUsername.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
             // 
             // mbLogin
             // 
@@ -133,51 +83,83 @@
             this.mbLogin.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.mbLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.mbLogin.Highlight = true;
-            this.mbLogin.Location = new System.Drawing.Point(6, 95);
+            this.mbLogin.Location = new System.Drawing.Point(6, 102);
             this.mbLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mbLogin.Name = "mbLogin";
             this.mbLogin.Size = new System.Drawing.Size(119, 32);
             this.mbLogin.TabIndex = 15;
-            this.mbLogin.Text = "&Retirar";
+            this.mbLogin.Text = "&Aceptar";
             this.mbLogin.UseSelectable = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.metroLabel1);
+            this.groupBox1.Controls.Add(this.metroTextBox1);
             this.groupBox1.Controls.Add(this.mbLogin);
             this.groupBox1.Controls.Add(this.txtUsername);
-            this.groupBox1.Location = new System.Drawing.Point(16, 30);
+            this.groupBox1.Location = new System.Drawing.Point(24, 30);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(423, 343);
+            this.groupBox1.Size = new System.Drawing.Size(451, 357);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Retiro Efectivo";
+            this.groupBox1.Text = "Cambiar Pin";
             // 
-            // ucRetiroMisCuentas
+            // metroTextBox1
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox1.CustomButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroTextBox1.CustomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroTextBox1.CustomButton.Image = null;
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(245, 1);
+            this.metroTextBox1.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroTextBox1.CustomButton.Name = "";
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(35, 35);
+            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox1.CustomButton.TabIndex = 1;
+            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox1.CustomButton.UseSelectable = true;
+            this.metroTextBox1.CustomButton.Visible = false;
+            this.metroTextBox1.DisplayIcon = true;
+            this.metroTextBox1.Icon = ((System.Drawing.Image)(resources.GetObject("metroTextBox1.Icon")));
+            this.metroTextBox1.Lines = new string[0];
+            this.metroTextBox1.Location = new System.Drawing.Point(6, 20);
+            this.metroTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroTextBox1.MaxLength = 32767;
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.PasswordChar = '\0';
+            this.metroTextBox1.PromptText = "Ingrese el nuevo Pin";
+            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox1.SelectedText = "";
+            this.metroTextBox1.SelectionLength = 0;
+            this.metroTextBox1.SelectionStart = 0;
+            this.metroTextBox1.ShortcutsEnabled = true;
+            this.metroTextBox1.Size = new System.Drawing.Size(281, 37);
+            this.metroTextBox1.TabIndex = 17;
+            this.metroTextBox1.UseSelectable = true;
+            this.metroTextBox1.WaterMark = "Ingrese el nuevo Pin";
+            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // ucCambiarPin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.metroLink2);
-            this.Controls.Add(this.mcbCuentaBancaria);
-            this.Controls.Add(this.mlCuenta);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "ucRetiroMisCuentas";
+            this.Name = "ucCambiarPin";
             this.Size = new System.Drawing.Size(1128, 602);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private MetroFramework.Controls.MetroLabel mlCuenta;
-        private MetroFramework.Controls.MetroComboBox mcbCuentaBancaria;
-        private MetroFramework.Controls.MetroLink metroLink2;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox txtUsername;
         private MetroFramework.Controls.MetroButton mbLogin;
         private System.Windows.Forms.GroupBox groupBox1;
+        private MetroFramework.Controls.MetroTextBox metroTextBox1;
     }
 }
